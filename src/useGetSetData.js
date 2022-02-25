@@ -10,9 +10,11 @@ const useGetSetData = (url) => {
   const getSetData = async (url, func) => {
     try {
       let data = await fetch(url, { signal: abortFetch.signal });
+
       if (data.ok) {
         let parsed = await data.json();
         func(parsed);
+
         setLoading(false);
         setError(null);
       } else {
@@ -34,7 +36,7 @@ const useGetSetData = (url) => {
     setTimeout(() => {
       getSetData(url, setData);
     }, 1500);
-    return abortFetch.abort();
+    return () => abortFetch.abort();
   }, [url]);
 
   return { data, Loading, error };
