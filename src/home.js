@@ -6,9 +6,7 @@ const Home = () => {
     data: blogs,
     Loading,
     error,
-  } = useGetSetData(
-    "https://my-json-server.typicode.com/David-Buchukuri/fake-db/blogs"
-  );
+  } = useGetSetData("https://wonderful-blogs-api.herokuapp.com/blogs");
 
   return (
     <div className="home">

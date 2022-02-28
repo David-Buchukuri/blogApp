@@ -1,6 +1,8 @@
 import Navbar from "./navbar";
 import Home from "./home";
+import Create from "./create";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import BlogDetails from "./blogDetails";
 function App() {
   return (
     <Router>
@@ -9,7 +11,8 @@ function App() {
         <div className="content">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/gelaIt" element={<div>gela it</div>} />
+            <Route path="/Create" element={<Create />} />
+            <Route path="/blogs/:id" element={<BlogDetails />} />
             <Route
               path="*"
               element={
