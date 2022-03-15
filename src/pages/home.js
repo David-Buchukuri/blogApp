@@ -1,12 +1,12 @@
-import BlogList from "./blogList";
-import useGetSetData from "./useGetSetData";
+import BlogList from "../components/blogList";
+import GetSetData from "../helper/getSetData";
 
 const Home = () => {
-  const {
+  let {
     data: blogs,
     Loading,
     error,
-  } = useGetSetData("https://wonderful-blogs-api.herokuapp.com/blogs");
+  } = GetSetData("https://wonderful-blogs-api.herokuapp.com/blogs");
 
   return (
     <div className="home">

@@ -44,10 +44,17 @@
 }
 
 .blog-preview {
+  display: flex;
+  justify-content: space-between;
   padding: 10px 16px;
   margin: 20px 0;
   border-bottom: 1px solid #fafafa;
 }
+
+.blog-preview a {
+  width: 100%;
+}
+
 .blog-preview:hover {
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
 }
@@ -77,7 +84,7 @@
   }
 }
 
-.error-message {
+.display-message {
   text-align: center;
   display: flex;
   font-weight: 900;
@@ -90,7 +97,14 @@
   transform: translate(-50%, -50%);
   height: 15%;
   width: 30%;
+}
+
+.error {
   background-color: #f580a3;
+}
+
+.success {
+  background-color: #79e96f;
 }
 
 .error-page {
@@ -139,11 +153,22 @@
   display: block;
 }
 
-.create button {
+.button {
+  display: flex;
+  justify-content: space-between;
   background: #f1356d;
   color: #fff;
   border: 0;
   padding: 8px;
   border-radius: 8px;
   cursor: pointer;
+}
+
+button p {
+  color: #fff;
+}
+
+button img {
+  width: 17px;
+  margin-left: 10px;
 }

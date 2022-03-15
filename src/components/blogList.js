@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+// import x from "./images/x.svg";
 
 const BlogList = ({ blogs, title }) => {
   return (

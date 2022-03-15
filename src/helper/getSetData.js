@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const useGetSetData = (url) => {
+const GetSetData = (url) => {
   const [data, setData] = useState(null);
   const [Loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -23,11 +23,10 @@ const useGetSetData = (url) => {
       }
     } catch (err) {
       if (err.name === "AbortError") {
-        console.log(`abort happened so we won't update our states`);
+        console.log(`abort`);
       } else {
         setLoading(false);
         setError(err);
-        // document.querySelector(".loading-btn").style.display = "none";
       }
     }
   };
@@ -42,4 +41,4 @@ const useGetSetData = (url) => {
   return { data, Loading, error };
 };
 
-export default useGetSetData;
+export default GetSetData;
